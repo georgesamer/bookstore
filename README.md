@@ -57,6 +57,13 @@ bookstore
 ├─ analytics_and_tuning.py     # Aggregation pipeline analytics & query diagnostics
 ├─ data
 │  └─ books.csv                # Raw source dataset (11,000+ records)
+├─ exports
+│  ├─ books.csv                # Cleaned/exported books collection (CSV)
+│  ├─ books.json                # Cleaned/exported books collection (JSON)
+│  ├─ bookstore_dashboard.png   # Visual analytics dashboard
+│  ├─ reviews.csv               # Exported reviews collection (CSV)
+│  └─ reviews.json              # Exported reviews collection (JSON)
+├─ export_and_visualize.py     # Exports processed data & generates the analytics dashboard
 ├─ README.md                   # Project documentation
 ├─ requirements.txt            # Python dependencies
 └─ transform_and_clean.py      # ETL script applying schema patterns & indexing
@@ -92,6 +99,20 @@ Execution plan diagnostics (`explain("executionStats")`) verify that queries exe
 
 ---
 
+## 📤 Data Export & Visualization
+
+The `export_and_visualize.py` script exports the processed `books` and `reviews` collections to both CSV and JSON formats under `exports/`, and generates a summary analytics dashboard:
+
+![Bookstore Analytics Dashboard](exports/bookstore_dashboard.png)
+
+| File | Description |
+|---|---|
+| `exports/books.csv` / `books.json` | Cleaned, pattern-applied books collection |
+| `exports/reviews.csv` / `reviews.json` | Full reviews collection |
+| `exports/bookstore_dashboard.png` | Visual summary of ratings, pricing, and publisher metrics |
+
+---
+
 ## 🚀 Getting Started
 
 ### 1. Prerequisites
@@ -119,4 +140,7 @@ python transform_and_clean.py
 
 # Step 2: Execute aggregation analytics and performance diagnostics
 python analytics_and_tuning.py
-```#
+
+# Step 3: Export processed data and generate the analytics dashboard
+python export_and_visualize.py
+```
