@@ -1,0 +1,8 @@
+# Database Driver
+pymongo>=4.6.0
+
+# Environment Variables Management
+python-dotenv>=1.0.0
+
+# Data Processing & Analysis (ETL Pipeline)
+pandas>=2.0.0

@@ -1,0 +1,38 @@
+# Byte-compiled / Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+venv/
+env/
+ENV/
+.venv/
+
+# Environment Variables & Secrets
+.env
+.env.local
+
+# Virtual Studio Code / IDEs
+.vscode/
+.idea/
+
+# Mac OS junk
+.DS_Store
+.DS_Store?
+._*
+__MACOSX/
+
+# Data Folders (Ignore heavy extracted data & outputs from tracking)
+synthea_zip/*.zip
+extracted_data/
+parquet_data/
+
+# Keep empty folder structures if needed via .gitkeep
+!synthea_zip/.gitkeep
+!extracted_data/.gitkeep
+!parquet_data/.gitkeep
+
+# Hugging Face local cache
+.gitattributes
